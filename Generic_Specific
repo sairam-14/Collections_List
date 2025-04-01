@@ -1,0 +1,29 @@
+package com.list;
+
+import java.util.ArrayList;
+
+public class Generic_Specific {
+
+	public static void main(String[] args) {
+    
+		ArrayList<Object> a = new ArrayList<>();//Generic
+		
+		a.add(new Demo());
+		a.add(new Demi());
+		a.add(new Generic_Specific());
+		System.out.println(a);
+		
+		
+		ArrayList<Demo> a1 = new ArrayList<>();//specific
+		a1.add(new Demo());
+		//a1.add(new Demi()); not possible
+	}
+
+}
+
+class Demo{
+	
+}
+class Demi{
+	
+}
