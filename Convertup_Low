@@ -1,0 +1,42 @@
+package com.list;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Convertup_Low {
+
+	public static void main(String[] args) {
+
+		ArrayList<Character> s1 = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		String ans;
+		do{
+		System.out.println("Enter the Alphabet");
+        char s=sc.next().charAt(0);
+        s1.add(s);
+        
+        System.out.println("Do you want to Enter one more alphabet");
+         ans =sc.next();
+		}while(ans.equalsIgnoreCase("yes"));
+		
+		System.out.println("Before convert:"+s1);
+		
+		for (int i = 0; i < s1.size(); i++) {
+			char ch=s1.get(i);
+			
+			if(ch>='A'&&ch<='Z'&&ch%2==0) {
+				
+				char  ch1=(char)(ch+32);
+				s1.set(i, ch1);
+				
+			}
+			
+		}
+		System.out.println("After convert Even Ascii:"+s1);
+		 
+		
+		
+
+	}
+
+}
