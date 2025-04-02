@@ -1,0 +1,36 @@
+package com.list;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Remove_Vowel {
+
+	public static void main(String[] args) {
+
+		ArrayList<Character> s1 = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		String ans;
+		do{
+		System.out.println("Enter the Alphabet");
+        char s=sc.next().charAt(0);
+        s1.add(s);
+        
+        System.out.println("Do you want to Enter one more alphabet");
+         ans =sc.next();
+		}while(ans.equalsIgnoreCase("yes"));
+		
+		System.out.println("Before remove Vowel:"+s1);
+		
+		ArrayList<Character>s2=new ArrayList<>();
+		s2.add('a');
+		s2.add('e');
+		s2.add('i');
+		s2.add('o');
+		s2.add('u');
+		
+		s1.removeAll(s2);
+		System.out.println(s1);
+		
+		}
+
+}
