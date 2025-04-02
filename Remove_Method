@@ -1,0 +1,30 @@
+package com.list;
+
+import java.util.ArrayList;
+
+public class Remove_Method {
+
+	public static void main(String[] args) {
+      
+		ArrayList<String> s= new ArrayList<>();
+		s.add("tilak");
+		s.add("sai");		
+		s.add("Akhila");		
+		s.add("Magic");		
+		s.add("spandana");	
+		s.add("Magic");
+		System.out.println(s);
+		
+		s.remove("Magic");
+		System.out.println(s);
+		
+		ArrayList<Integer> a= new ArrayList<>();
+		a.add(1);
+		a.add(32);
+		a.add(3);
+		System.out.println(a);
+		a.remove(2);
+		System.out.println(a);
+	}
+
+}
