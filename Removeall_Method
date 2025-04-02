@@ -1,0 +1,53 @@
+package com.list;
+
+import java.util.ArrayList;
+
+public class Remove_All {
+
+	public static void main(String[] args) {
+
+		ArrayList<Integer> a = new ArrayList<>();
+		a.add(10);
+		a.add(20);
+		a.add(30);
+		a.add(40);
+		ArrayList<Integer> a1 = new ArrayList<>();
+
+		a1.add(1);
+		a1.add(2);
+		a1.add(3);
+		a1.add(4);
+
+		a.addAll(2, a1);
+		System.out.println(a);
+		a.removeAll(a1);
+		System.out.println(a);
+		
+		a.add(0, 1);
+		a.add(3, 2);
+		a.add(5, 3);
+		a.add(7,4);
+		System.out.println(a);
+		a.removeAll(a1);
+		System.out.println(a);
+		
+		
+		ArrayList<Integer> a2 =new ArrayList<>();
+		a2.add(1);
+		a2.add(3);
+		a2.add(4);
+		a2.add(5);
+		a2.add(2);
+		a2.add(6);
+		System.out.println("a2:"+a2);
+		ArrayList<Integer> a3=new ArrayList<>();
+		a3.add(1);
+		a3.add(2);
+		a3.add(3);
+		a2.removeAll(a3);
+		System.out.println("a2:"+a2);
+		
+
+	}
+
+}
