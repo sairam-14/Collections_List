@@ -1,0 +1,46 @@
+package com.list;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Prime_Sqr {
+
+	public static void main(String[] args) {
+
+		ArrayList<Integer> s1 = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		String ans;
+		do {
+			System.out.println("Enter the number");
+			int s = sc.nextInt();
+			s1.add(s);
+
+			System.out.println("Do you want to Enter one more number");
+			ans = sc.next();
+		} while (ans.equalsIgnoreCase("yes"));
+
+		System.out.println("Before convert:" + s1);
+
+		int count = 0;
+
+		int sqr = 1;
+		for (int i = 0; i < s1.size(); i++) {
+			int n = s1.get(i);
+			for (int j = 1; j <= n; j++) {
+
+				if (n % j == 0) {
+
+					sqr = sqr *n;
+					count++;
+
+				}
+				if (count == 2) {
+					s1.set(i, sqr);
+				}
+			}
+		}
+		System.out.println(s1);
+
+	}
+
+}
